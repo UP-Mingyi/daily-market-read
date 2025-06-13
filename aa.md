@@ -1,16 +1,16 @@
 设置NoteGen同步
 
-# 同步[](https://notegen.top/zh/settings/sync.html#%E5%90%8C%E6%AD%A5)
+# 同步
 
 数据同步配置指南，帮助您设置跨设备的笔记同步功能。
 
 ![image.png](https://s2.loli.net/2025/06/06/e67y91fG2h4gsTO.png)
 
-## 主要同步方式[](https://notegen.top/zh/settings/sync.html#%E4%B8%BB%E8%A6%81%E5%90%8C%E6%AD%A5%E6%96%B9%E5%BC%8F)
+## 主要同步方式
 
 主要同步方式目前支持 Github、Gitee，原因是历史回滚功能需要 Git（本地无需安装 Git） 的支持。
 
-### 配置[](https://notegen.top/zh/settings/sync.html#%E9%85%8D%E7%BD%AE)
+### 配置
 
 * Github Access Token，需要去 [Github](https://github.com/settings/tokens/new) 或 [Gitee](https://gitee.com/profile/personal_access_tokens) 获取 令牌，注意需要访问仓库的权限。
 * 自动同步，开启后，在写作时，停止输入后的 \* 秒后进行自动快速备份，提交内容为固定模板，可折叠。
