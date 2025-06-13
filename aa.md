@@ -1,3 +1,5 @@
+设置NoteGen同步
+
 # 同步[](https://notegen.top/zh/settings/sync.html#%E5%90%8C%E6%AD%A5)
 
 数据同步配置指南，帮助您设置跨设备的笔记同步功能。
