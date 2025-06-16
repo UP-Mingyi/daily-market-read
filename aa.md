@@ -22,3 +22,5 @@ TIP
 * 注意要选择 Github 或 Gitee 作为主要备份方式才可生效，按钮位于页面最下方。
 * Markdown 都会存储于私有仓库。
 * Github 会额外创建一个公开仓库用于图床（私有将无法正常访问图片）。
+
+![image.png](https://cdn.jsdelivr.net/gh/UP-Mingyi/note-gen-image-sync@main/2025-06/9aa728bc-2b52-43b4-a876-5c18cecb843a.png)
