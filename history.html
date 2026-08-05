@@ -4,187 +4,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>盘前必读 · 历史归档</title>
+<title>历史归档 - 盘前必读</title>
 <style>
 :root {
-  --bg: #0a0e1a;
-  --bg2: #121829;
-  --bg3: #1a2236;
-  --ink: #e2e8f0;
-  --muted: #8a94a6;
-  --rule: #1e2a3a;
-  --accent: #ef4444;
-  --accent2: #3b82f6;
-  --gold: #fbbf24;
+  --bg: #0f1117;
+  --bg2: #1a1d26;
+  --bg3: #222633;
+  --ink: #e8e9ec;
+  --muted: #8b92a8;
+  --rule: #2d3142;
+  --accent: #e63946;
+  --accent2: #2a9d8f;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.7;
   font-size: 15px;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
 }
+.container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
 .header {
-  background: linear-gradient(135deg, #0d1117 0%, #161e2e 100%);
-  color: #fff;
-  padding: 40px 0 30px;
-  text-align: center;
+  background: linear-gradient(135deg, #14161f 0%, #1a1d26 100%);
   border-bottom: 3px solid var(--accent);
+  padding: 30px 0 24px;
+  text-align: center;
+  position: relative;
 }
-.header .badge {
+.header h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: 0.08em; }
+.header .date { font-size: 0.9rem; color: var(--muted); margin-top: 6px; }
+.nav-home {
   display: inline-block;
-  background: rgba(239,68,68,0.15);
-  border: 1px solid rgba(239,68,68,0.3);
+  margin-top: 14px;
+  padding: 6px 16px;
+  border: 1px solid var(--accent);
   color: var(--accent);
-  padding: 4px 16px;
-  border-radius: 20px;
-  font-size: 13px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 12px;
+  transition: all 0.2s;
 }
-.header h1 { font-size: 28px; font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; }
-.header .nav-link { color: var(--accent2); text-decoration: none; font-size: 14px; }
-.header .nav-link:hover { text-decoration: underline; }
-.container { max-width: 760px; margin: 0 auto; padding: 32px 20px; }
-.year-group { margin-bottom: 32px; }
-.year-label {
-  font-size: 20px;
+.nav-home:hover { background: var(--accent); color: #fff; }
+
+/* Year group */
+.year-group { margin: 32px 0; }
+.year-title {
+  font-size: 1.3rem;
   font-weight: 700;
-  color: var(--gold);
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--rule);
+  color: var(--accent);
   margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
-.year-label::before {
-  content: "";
-  width: 4px;
-  height: 20px;
+.year-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px; height: 22px;
   background: var(--accent);
   border-radius: 2px;
 }
-.dates { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
-.date-link {
-  display: block;
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+}
+.date-card {
   background: var(--bg2);
   border: 1px solid var(--rule);
-  border-radius: 10px;
-  padding: 16px;
-  font-size: 15px;
-  color: var(--ink);
-  text-decoration: none;
-  transition: all 0.2s;
+  border-radius: 6px;
+  padding: 16px 12px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.2s;
+  display: block;
 }
-.date-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: var(--accent);
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-.date-link:hover {
+.date-card:hover {
   border-color: var(--accent);
-  background: var(--bg3);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(239,68,68,0.1);
+  background: var(--bg3);
 }
-.date-link:hover::before { opacity: 1; }
-.date-link .date-main {
+.date-card .month-day {
+  font-size: 1.2rem;
   font-weight: 700;
-  font-size: 17px;
-  margin-bottom: 4px;
+  color: var(--accent);
 }
-.date-link .date-day {
-  font-size: 12px;
+.date-card .weekday {
+  font-size: 0.8rem;
   color: var(--muted);
+  margin-top: 4px;
 }
-.date-link.latest {
-  border-color: rgba(239,68,68,0.4);
-  background: rgba(239,68,68,0.05);
+.date-card .arrow {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 8px;
 }
-.date-link.latest .badge-new {
-  display: inline-block;
-  background: var(--accent);
-  color: #fff;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 1px 6px;
-  border-radius: 4px;
-  margin-bottom: 4px;
-}
+
+/* Footer */
 .footer {
   text-align: center;
-  padding: 32px 20px;
-  font-size: 13px;
+  padding: 30px 20px;
   color: var(--muted);
+  font-size: 0.8rem;
   border-top: 1px solid var(--rule);
-  margin-top: 32px;
+  margin-top: 20px;
 }
-.footer .divider {
-  width: 60px;
-  height: 2px;
-  background: var(--rule);
-  margin: 0 auto 16px;
-}
-.footer a { color: var(--accent2); text-decoration: none; }
-@media (max-width: 640px) {
-  .header h1 { font-size: 22px; }
-  .dates { grid-template-columns: repeat(2, 1fr); }
-  .date-link { padding: 12px; font-size: 14px; }
-  .date-link .date-main { font-size: 15px; }
+
+@media (max-width: 600px) {
+  .header h1 { font-size: 1.4rem; }
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="badge">历史归档</div>
-  <h1>盘前必读 · 历史归档</h1>
-  <p style="margin-top:8px;opacity:0.8;"><a class="nav-link" href="index.html">← 返回最新首页</a></p>
-</header>
-
-<div class="container">
-  <div class="year-group">
-    <div class="year-label">2026年</div>
-    <div class="dates">
-      <a class="date-link latest" href="archive/2026-08-04.html">
-        <span class="badge-new">最新</span>
-        <div class="date-main">8月4日</div>
-        <div class="date-day">星期二</div>
-      </a>
-      <a class="date-link" href="archive/2026-08-03.html">
-        <div class="date-main">8月3日</div>
-        <div class="date-day">星期一</div>
-      </a>
-      <a class="date-link" href="archive/2026-07-29.html">
-        <div class="date-main">7月29日</div>
-        <div class="date-day">星期三</div>
-      </a>
-      <a class="date-link" href="archive/2026-07-28.html">
-        <div class="date-main">7月28日</div>
-        <div class="date-day">星期二</div>
-      </a>
-    </div>
+<div class="header">
+  <div class="container">
+    <h1>盘前必读 · 历史归档</h1>
+    <div class="date">过往每日盘前报告汇总</div>
+    <a href="index.html" class="nav-home">← 返回最新首页</a>
   </div>
 </div>
 
-<footer class="footer">
-  <div class="divider"></div>
-  <p>数据来源为东方财富妙想 MCP 及公开网络信息，仅供参考，不构成投资建议。</p>
-  <p style="margin-top:8px;"><a href="index.html">返回最新首页</a></p>
-</footer>
+<div class="container">
+
+  <div class="year-group">
+    <div class="year-title">2026年</div>
+    <div class="card-grid">
+      <a href="archive/2026-08-05.html" class="date-card">
+        <div class="month-day">08-05</div>
+        <div class="weekday">周三</div>
+        <div class="arrow">查看报告 →</div>
+      </a>
+      <a href="archive/2026-08-04.html" class="date-card">
+        <div class="month-day">08-04</div>
+        <div class="weekday">周二</div>
+        <div class="arrow">查看报告 →</div>
+      </a>
+      <a href="archive/2026-08-03.html" class="date-card">
+        <div class="month-day">08-03</div>
+        <div class="weekday">周一</div>
+        <div class="arrow">查看报告 →</div>
+      </a>
+      <a href="archive/2026-07-29.html" class="date-card">
+        <div class="month-day">07-29</div>
+        <div class="weekday">周二</div>
+        <div class="arrow">查看报告 →</div>
+      </a>
+      <a href="archive/2026-07-28.html" class="date-card">
+        <div class="month-day">07-28</div>
+        <div class="weekday">周一</div>
+        <div class="arrow">查看报告 →</div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div>数据来源：东方财富妙想MCP | 公开网络信息</div>
+  <div style="margin-top:4px;">本报告仅供参考，不构成投资建议。</div>
+</div>
 
 </body>
 </html>
