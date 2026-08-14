@@ -4,88 +4,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>历史报告 | 盘前必读</title>
+<title>盘前必读 — 历史回顾</title>
 <style>
+@font-face {
+  font-family: 'IBMPlexSerif';
+  src: url('./archive/2026-08-14/_shared/fonts/IBMPlexSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'IBMPlexSerif';
+  src: url('./archive/2026-08-14/_shared/fonts/IBMPlexSerif-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: url('./archive/2026-08-14/_shared/fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
 :root {
   --bg: #0d1b2a;
   --bg2: #1b263b;
   --ink: #e0e1dd;
-  --muted: #8899aa;
-  --rule: #2a3a4f;
+  --muted: #778da9;
+  --rule: #415a77;
   --accent: #d4af37;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: 'WenQuanYi Micro Hei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: 'IBMPlexSerif', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', serif;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.7;
-  font-size: 15px;
+  font-size: 16px;
   min-height: 100vh;
 }
+.container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
 header {
-  background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
+  padding: 48px 0 32px;
   border-bottom: 2px solid var(--accent);
-  padding: 2rem 0;
-  text-align: center;
+  margin-bottom: 40px;
 }
-header h1 { font-size: 2rem; color: var(--accent); margin-bottom: 0.3rem; }
-header .sub { font-size: 0.95rem; color: var(--muted); }
-.container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
-.report-item {
+header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; }
+header .subtitle { font-size: 0.9rem; color: var(--accent); margin-top: 8px; font-family: 'IBMPlexMono', monospace; }
+.history-list { list-style: none; }
+.history-list li {
+  padding: 16px 20px;
+  margin-bottom: 12px;
   background: var(--bg2);
+  border-radius: 6px;
   border: 1px solid var(--rule);
-  border-radius: 8px;
-  padding: 1.2rem 1.5rem;
-  margin-bottom: 0.8rem;
+  border-left: 3px solid var(--accent);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: border-color 0.2s;
 }
-.report-item:hover { border-color: var(--accent); }
-.report-item .date { font-size: 1.05rem; font-weight: 700; color: var(--ink); }
-.report-item .day { font-size: 0.8rem; color: var(--muted); }
-.report-item a {
-  background: var(--accent);
-  color: var(--bg);
-  text-decoration: none;
-  padding: 0.4rem 1.2rem;
-  border-radius: 6px;
+.history-list li .date-label {
+  font-size: 1.1rem;
   font-weight: 700;
-  font-size: 0.85rem;
-  transition: opacity 0.2s;
+  font-family: 'IBMPlexMono', monospace;
 }
-.report-item a:hover { opacity: 0.85; }
+.history-list li a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 1px solid var(--accent);
+  padding: 6px 16px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.history-list li a:hover { background: var(--accent); color: var(--bg); }
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 40px 24px;
   color: var(--muted);
   font-size: 0.8rem;
+  border-top: 1px solid var(--rule);
+  margin-top: 40px;
 }
-nav { text-align: center; padding: 1rem 0; }
-nav a { color: var(--accent); text-decoration: none; font-weight: 700; }
 </style>
 </head>
 <body>
-<header>
-  <h1>盘前必读 · 历史报告</h1>
-  <div class="sub">每个交易日 9:00 更新</div>
-</header>
-<nav>
-  <a href="index.html">返回最新报告</a>
-</nav>
 <div class="container">
-  <div class="report-item">
-    <div>
-      <div class="date">2026年8月11日</div>
-      <div class="day">星期二</div>
-    </div>
-    <a href="archive/2026-08-11.html">查看</a>
-  </div>
-</div>
+<header>
+  <h1>历史回顾</h1>
+  <div class="subtitle">PAST BRIEFINGS</div>
+</header>
+<ul class="history-list">
+  <li><span class="date-label">2026-08-14</span> <a href="archive/2026-08-14/index.html">查看报告</a></li>
+  <li><span class="date-label">2026-08-07</span> <a href="archive/2026-08-07/index.html">查看报告</a></li>
+</ul>
 <footer>
-  <div class="disclaimer">数据来源为东方财富妙想 MCP、小石金融数据及公开网络信息，仅供参考，不构成投资建议。</div>
+  <p>数据来源：东方财富妙想 MCP、小石金融数据及公开网络信息</p>
+  <p>免责声明：本报告仅供参考，不构成投资建议。</p>
 </footer>
+</div>
 </body>
 </html>
