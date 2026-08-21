@@ -57,7 +57,7 @@
 ### 报告底部
 
 - 内容末尾、footer 之前，新增"盘前必读 · 历史归档"跳转按钮，相对路径 `<a href="history.html">`，样式：深色底 + 金色边框 + 金色文字，悬停金色底白字
-- footer 注明：数据来源为东方财富妙想 MCP、小石金融数据及公开网络信息，仅供参考，不构成投资建议
+- footer 注明：数据来源为东方财富及公开网络信息，仅供参考，不构成投资建议
 - 日期使用报告生成当天的实际日期；内容遵循涨红跌绿规则
 
 ---
@@ -184,7 +184,7 @@ footer p {{ font-size:.78rem; color:var(--muted); }}
 <div class="container"><ul class="archive-list">
 {items}
 </ul></div>
-<footer><p>数据来源：东方财富妙想 MCP、小石金融数据及公开网络信息</p></footer>
+<footer><p>数据来源为东方财富及公开网络信息，仅供参考，不构成投资建议</p></footer>
 </body></html>'''
 with open(os.path.join(REPO, "history.html"), "w", encoding="utf-8") as f:
     f.write(page)
