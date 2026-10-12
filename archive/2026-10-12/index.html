@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>盘前必读 · 2026-10-12</title><style>
+@font-face { font-family: 'Tektur'; src: url('../../_shared/fonts/Tektur-Medium.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'Tektur'; src: url('../../_shared/fonts/Tektur-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'WorkSans'; src: url('../../_shared/fonts/WorkSans-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'WorkSans'; src: url('../../_shared/fonts/WorkSans-Bold.ttf') format('truetype'); font-weight: 700; }
+@font-face { font-family: 'IBMPlexMono'; src: url('../../_shared/fonts/IBMPlexMono-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'IBMPlexMono'; src: url('../../_shared/fonts/IBMPlexMono-Bold.ttf') format('truetype'); font-weight: 700; }
+
+:root {
+  --bg: #0d1b2a;
+  --bg2: #1b263b;
+  --bg3: #243447;
+  --ink: #e0e1dd;
+  --muted: #778da9;
+  --rule: #2a3a52;
+  --accent: #d4af37;
+  --up: #e63946;
+  --down: #2a9d8f;
+  --warn: #f4a261;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'WorkSans', -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+.top-bar {
+  background: linear-gradient(180deg, #1a2d42 0%, #0d1b2a 100%);
+  border-bottom: 3px solid var(--up);
+  padding: 36px 20px 28px;
+  text-align: center;
+}
+.top-bar h1 {
+  font-family: 'Tektur', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+.top-bar .sub { color: var(--muted); font-size: 0.9rem; margin-top: 6px; font-family: 'IBMPlexMono', monospace; }
+.top-bar .tag {
+  display: inline-block; margin-top: 10px; padding: 3px 14px;
+  border: 1px solid var(--accent); border-radius: 3px;
+  color: var(--accent); font-size: 0.78rem; letter-spacing: 0.1em;
+  font-family: 'Tektur', sans-serif;
+}
+.container { max-width: 980px; margin: 0 auto; padding: 36px 20px; }
+.section-header {
+  background: var(--bg3); padding: 14px 20px;
+  border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 14px; margin-top: 40px;
+}
+.section-header .num { font-family: 'Tektur', sans-serif; font-size: 1.6rem; font-weight: 500; color: var(--accent); min-width: 28px; }
+.section-header h2 { font-family: 'Tektur', sans-serif; font-size: 1.25rem; font-weight: 500; color: #fff; letter-spacing: 0.04em; }
+.section-body {
+  background: var(--bg2); border: 1px solid var(--rule); border-top: none;
+  border-radius: 0 0 4px 4px; padding: 24px 20px;
+}
+.summary { font-size: 15px; line-height: 1.8; color: var(--ink); margin-bottom: 20px; }
+.summary strong { color: var(--accent); font-weight: 700; }
+.metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 20px 0; }
+.metric-card { background: var(--bg); border: 1px solid var(--rule); border-radius: 6px; padding: 16px 14px; text-align: center; }
+.metric-card .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 8px; }
+.metric-card .value { font-family: 'IBMPlexMono', monospace; font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+.metric-card .change { font-family: 'IBMPlexMono', monospace; font-size: 0.85rem; font-weight: 700; margin-top: 4px; }
+.up { color: var(--up); }
+.down { color: var(--down); }
+.flat { color: var(--muted); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; border-radius: 4px; border: 1px solid var(--rule); margin: 16px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+thead { background: var(--bg3); position: sticky; top: 0; z-index: 1; }
+th { padding: 10px 12px; text-align: left; font-weight: 700; color: var(--ink); border-bottom: 1px solid var(--rule); white-space: nowrap; }
+td { padding: 9px 12px; border-bottom: 1px solid var(--rule); color: var(--ink); }
+tbody tr:hover { background: rgba(255,255,255,0.03); }
+td.num, th.num { font-family: 'IBMPlexMono', monospace; text-align: right; }
+td.center, th.center { text-align: center; }
+.news-item { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.news-item:last-child { border-bottom: none; }
+.news-item .news-title { font-size: 0.92rem; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.news-item .news-meta { font-size: 0.75rem; color: var(--muted); margin-bottom: 6px; }
+.news-item .news-meta .source { color: var(--accent); }
+.news-item .news-summary { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+.callout {
+  background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.35);
+  border-radius: 6px; padding: 14px 16px; margin: 16px 0; color: var(--ink);
+}
+.callout .callout-title { color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+.callout ul { margin-left: 1.1rem; }
+.callout li { margin-bottom: 5px; }
+.chart-box { height: 360px; margin: 20px 0; }
+.footer { text-align: center; padding: 24px 20px 40px; border-top: 1px solid var(--rule); margin-top: 40px; color: var(--muted); font-size: 0.8rem; }
+.footer a { color: var(--accent); text-decoration: none; }
+.footer .sources { text-align: left; max-width: 760px; margin: 0 auto 24px; }
+.footer .sources h3 { color: var(--accent); font-size: 0.9rem; margin-bottom: 10px; }
+.footer .sources ol { padding-left: 1.2rem; font-size: 0.78rem; line-height: 1.7; }
+.history-btn {
+  display: inline-block; margin: 18px 0 8px; padding: 10px 26px;
+  border: 1px solid var(--accent); border-radius: 4px; color: var(--accent);
+  text-decoration: none; font-size: 0.85rem; transition: all 0.3s;
+}
+.history-btn:hover { background: var(--accent); color: #0d1b2a; }
+
+
+a{color:#d4af37} .source{font-size:12px;color:#778da9;margin-top:10px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.quote{padding:22px;background:#1b263b;border:1px solid #2a3a52;border-radius:5px}.quote strong{font-size:29px;display:block;font-family:IBMPlexMono,monospace}.quote .label{color:#778da9;font-size:13px}.up{color:#e63946}.down{color:#2a9d8f}.body-panel{padding:24px;background:#1b263b;border:1px solid #2a3a52;line-height:1.85}.body-panel p{margin:0 0 12px}.body-panel h3{color:#d4af37;font-size:17px;margin:18px 0 8px}.body-panel h3:first-child{margin-top:0}.notice{border-left:3px solid #f4a261;padding:12px 16px;background:#243447;margin:18px 0;color:#e0e1dd}.chart{height:360px;margin:20px 0}.table-scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:12px;border-bottom:1px solid #2a3a52;text-align:left;vertical-align:top}th{background:#243447;color:#d4af37}tr:hover{background:#243447}.pill{display:inline-block;padding:2px 8px;background:#243447;color:#d4af37;font-size:12px}.history-link{display:block;text-align:center;margin:34px auto;padding:15px;border:1px solid #d4af37;max-width:330px;text-decoration:none}.history-link:hover{background:#d4af37;color:#fff}.nav{display:flex;flex-wrap:wrap;gap:14px;padding:18px 0;border-bottom:1px solid #2a3a52}.nav a{text-decoration:none;font-size:13px}footer{padding:24px;text-align:center;border-top:1px solid #2a3a52;color:#778da9;font-size:12px}.archive-list{list-style:none;padding:0}.archive-list li{display:flex;gap:16px;padding:16px;border-bottom:1px solid #2a3a52}.archive-list a{margin-left:auto}.archive-list .date{color:#d4af37}@media(max-width:640px){.grid{grid-template-columns:1fr 1fr}.quote{padding:15px}.quote strong{font-size:22px}.body-panel{padding:16px}.top-bar h1{font-size:1.8rem}.container{padding:20px 14px}.chart{height:400px}th,td{min-width:100px}.archive-list .label{display:none}}
+
+</style></head><body><header class="top-bar"><h1>盘前必读 · 2026年10月12日</h1><div class="sub">信息截止：北京时间09:00 · 生成：2026-10-12 09:07</div><span class="tag">交易日早报</span></header><main class="container"><nav class="nav"><a href="#s1">01 市场温度计</a><a href="#s2">02 隔夜回顾与外盘速递</a><a href="#s3">03 宏观要闻</a><a href="#s4">04 板块前瞻</a><a href="#s5">05 个股公告速览</a><a href="#s6">06 操作建议概览</a></nav><div class="notice">行情基准：A股、港股、美股及所列期货均为2026-10-09已完成交易日；海外日期为当地交易日。新闻主要窗口：10月9日15:00至10月12日09:00（北京时间）。</div><section id="s1"><div class="section-header"><span class="num">01</span><h2>市场温度计</h2></div><div class="body-panel"><p>10月9日A股三大指数小幅收涨，涨幅均未超过0.3%，市场仍呈结构性分化。沪深两项成交额合计约1.9006万亿元，创业板成交额包含在深市范围内，不重复相加。行业样本中贵金属指数涨幅突出，电力设备上涨；银行、光学光电子及半导体回落。今日关注政策主题能否转化为成交与上涨覆盖面的同步改善，而不是仅由少数个股驱动。</p><div class="grid"><div class="quote"><div class="label">上证指数 · 10-09</div><strong>3,813.79</strong><span class="up">+0.05%</span><span class="label"> · 收盘 / 点</span></div><div class="quote"><div class="label">深证成指 · 10-09</div><strong>12,641.86</strong><span class="up">+0.17%</span><span class="label"> · 收盘 / 点</span></div><div class="quote"><div class="label">创业板指 · 10-09</div><strong>3,043.33</strong><span class="up">+0.22%</span><span class="label"> · 收盘 / 点</span></div></div><div class="table-scroll"><table><thead><tr><th>指数 / 交易日</th><th>成交额</th><th>统计说明</th></tr></thead><tbody><tr><td>上证指数 / 2026-10-09</td><td>8,886亿元</td><td>妙想指数口径</td></tr><tr><td>深证成指 / 2026-10-09</td><td>10,120亿元</td><td>妙想指数口径</td></tr><tr><td>创业板指 / 2026-10-09</td><td>4,948亿元</td><td>包含于深市成交范围</td></tr></tbody></table></div><h3>行业样本与资金方向</h3><div class="table-scroll"><table><thead><tr><th>行业 / 2026-10-09</th><th>指数涨跌幅</th><th>主力净流入</th></tr></thead><tbody><tr><td>贵金属（申万）</td><td>+5.622%</td><td>+14.940亿元</td></tr><tr><td>电力设备（申万）</td><td>+0.606%</td><td>+24.100亿元</td></tr><tr><td>石油石化（申万）</td><td>-0.204%</td><td>-1.882亿元</td></tr><tr><td>半导体（申万）</td><td>-0.676%</td><td>-42.250亿元</td></tr><tr><td>光学光电子（申万）</td><td>-0.822%</td><td>-8.332亿元</td></tr><tr><td>银行（申万）</td><td>-1.066%</td><td>-14.650亿元</td></tr></tbody></table></div><div class="notice">这是指定行业样本，不是全行业涨跌排行榜。资金采用妙想“主力净流入资金”口径，不能等同于机构持仓变化；负值代表净流出。概念板块完整排行未取得，不作补造。</div><div class="source">来源：东方财富妙想 mx_index_block_finance_data｜行情日期：2026-10-09｜涨跌幅：%，金额：亿元。</div></div></section><section id="s2"><div class="section-header"><span class="num">02</span><h2>隔夜回顾与外盘速递</h2></div><div class="body-panel"><div class="grid"><div class="quote"><div class="label">道琼斯工业平均 · 10-09</div><strong>51,654.95</strong><span class="up">+0.83%</span><span class="label"> · 收盘 / 点</span></div><div class="quote"><div class="label">纳斯达克综合 · 10-09</div><strong>27,366.17</strong><span class="up">+0.64%</span><span class="label"> · 收盘 / 点</span></div><div class="quote"><div class="label">标普500 · 10-09</div><strong>7,811.54</strong><span class="up">+0.59%</span><span class="label"> · 收盘 / 点</span></div><div class="quote"><div class="label">恒生指数 · 10-09</div><strong>24,211.35</strong><span class="up">+1.79%</span><span class="label"> · 收盘 / 点</span></div></div><p style="margin-top:18px">10月9日美股三大指数及恒生指数均收涨。NYMEX原油主连当日涨0.19%，COMEX黄金主连涨1.52%；仅采用最近已完成交易日涨跌幅，未使用10月12日早间动态报价。</p><div id="global-chart" class="chart" role="img" aria-label="10月9日全球主要指数与期货收盘涨跌幅对比"></div><div class="source">来源：东方财富妙想 mx_index_block_finance_data、mx_comprehensive_finance_data｜指数与期货交易日期：2026-10-09（各市场当地交易日）｜涨跌幅：%。</div><div class="notice">期货工具返回的收盘报价单位标注存在歧义，因此不展示绝对价格，只保留可比的涨跌幅。图表不比较不同品种的点位。</div></div></section><section id="s3"><div class="section-header"><span class="num">03</span><h2>宏观要闻</h2></div><div class="body-panel"><h3>① 新质生产力顶层文件</h3><p>中共中央、国务院印发《关于发展新质生产力的意见》，围绕科技创新、科技与产业融合、发展方式、体制机制和人才机制提出19项重点举措。国家发展改革委随后发布答记者问。文件强调因地制宜，也要求防止盲目投资与“内卷式”竞争。</p><div class="source">来源：国家发展改革委｜发布时间：2026-10-09（具体时刻未取得）｜<a href="https://www.ndrc.gov.cn/xwdt/xwfb/202610/t20261009_1408037.html" target="_blank" rel="noopener noreferrer">原文</a>｜已核对官方解读；因时刻缺失，按扩大时间窗列入</div><h3>② 积极财政政策继续发力</h3><p>新华社报道，财政部10月9日发布2026年上半年财政政策执行情况报告，下一步将发挥存量政策效能，并根据经济运行情况谋划增量政策，加大逆周期调节、扩大内需并保障民生。报告方向不等同于当天新增资金已经全部落地。</p><div class="source">来源：新华社 / 人民网转载｜发布时间：2026-10-09 17:15｜<a href="http://finance.people.com.cn/BIG5/n1/2026/1009/c1004-40811504.html" target="_blank" rel="noopener noreferrer">原文</a>｜已核对原文</div><h3>③ 今日公开信息日程</h3><p>妙想检索到的公开日程显示，商务部拟于10月15日举行例行新闻发布会。该事项属于后续日程，不构成今天已经发布的新政策；本篇不对发布内容作预测。</p><div class="source">来源：财联社，妙想检索｜发布时间：2026-10-12 08:54｜<a href="https://www.cls.cn/detail/2501740" target="_blank" rel="noopener noreferrer">原文</a>｜媒体原文链接已取得；尚未发生的发布会</div></div></section><section id="s4"><div class="section-header"><span class="num">04</span><h2>板块前瞻</h2></div><div class="body-panel"><p><span class="pill">分析</span> 以下方向来自政策文件、行业行情与公司公告，相关个股仅用于对应证据，不构成买入名单。</p><div class="table-scroll"><table><thead><tr><th>关注方向</th><th>证据与相关公司</th><th>盘中验证与风险</th></tr></thead><tbody><tr><td>人工智能与算力硬件</td><td>《意见》提出全面实施“人工智能+”；鸿富瀚301086称液冷板整柜模组量产，广合科技001389称算力PCB需求推动业绩。</td><td>观察成交与板块广度；公司业绩均为未经审计预告，不能外推整个行业。</td></tr><tr><td>机器人、生物医药等新兴产业</td><td>官方文件将机器人、生物医药等列入战略性新兴产业，并强调跨行业融合。</td><td>政策方向不等于短期订单或利润，避免仅凭政策名称追涨。</td></tr><tr><td>贵金属</td><td>10月9日贵金属申万指数涨5.622%、主力净流入14.94亿元；COMEX黄金主连同日涨1.523%。</td><td>单日共振不代表趋势持续，关注外盘价格与A股溢价波动。</td></tr><tr><td>电力与重组事项</td><td>电力设备申万指数涨0.606%；云维股份600725披露拟收购红河发电100%股权的重组仍在推进。</td><td>交易方尚未签正式协议，且需决策及监管批准，实施存在重大不确定性。</td></tr></tbody></table></div><div class="source">政策来源：国家发展改革委及官方转载；行情来源：东方财富妙想；公司信息来源见第5章公告原文。</div></div></section><section id="s5"><div class="section-header"><span class="num">05</span><h2>个股公告速览</h2></div><div class="body-panel"><p>以下4项已核对公司公告PDF正文。妙想披露时间与文件落款日期分别列示；内容为公司披露，不代表本篇对未来结果作保证。</p><div class="table-scroll"><table><thead><tr><th>公司 / 代码</th><th>公告摘要</th><th>主要风险</th><th>来源与时间</th></tr></thead><tbody><tr><td>云维股份 / 600725</td><td>拟发行股份及支付现金购买云能（红河）发电100%股权；公司称相关工作仍在推进。</td><td>交易各方尚未签署正式协议，尚需内部决策及监管批准，最终实施存在重大不确定性。</td><td><a href="https://pdf.dfcfw.com/pdf/H2_AN202610091830260162_1.pdf" target="_blank" rel="noopener noreferrer">公司公告PDF</a><br>文件落款：2026-10-10<br>妙想披露：2026-10-10 00:15:46<br>正文已核对</td></tr><tr><td>鸿富瀚 / 301086</td><td>预计前三季度归母净利润1.70亿—2.00亿元，同比增长108.19%—144.93%；称液冷板整柜模组量产交付。</td><td>数据为财务部门初步测算且未经审计，最终以三季报为准。</td><td><a href="https://pdf.dfcfw.com/pdf/H2_AN202610091830266174_1.PDF" target="_blank" rel="noopener noreferrer">公司公告PDF</a><br>文件落款：2026-10-09<br>妙想披露：2026-10-09 17:04:01<br>正文已核对</td></tr><tr><td>六九一二 / 301592</td><td>股东胡杨减持260,400股，占总股本0.372%，减持计划期限届满；减持后持股2.997%。</td><td>该股东不是控股股东或实控人；历史减持已经完成，不等于新的减持计划。</td><td><a href="https://pdf.dfcfw.com/pdf/H2_AN202610091830273237_1.PDF" target="_blank" rel="noopener noreferrer">公司公告PDF</a><br>文件落款：2026-10-09<br>妙想披露：2026-10-09 21:00:00<br>正文已核对</td></tr><tr><td>广合科技 / 001389</td><td>预计前三季度归母净利润14.5亿—15.0亿元，同比增长100.33%—107.23%；称算力PCB与海外产能贡献增长。</td><td>业绩预告未经审计，具体数据以三季度报告为准。</td><td><a href="https://pdf.dfcfw.com/pdf/H2_AN202610111830334648_1.PDF" target="_blank" rel="noopener noreferrer">公司公告PDF</a><br>文件落款：2026-10-09<br>妙想披露：2026-10-11 18:03:31<br>正文已核对</td></tr></tbody></table></div><div class="source">来源：各公司公告，经东方财富妙想 mx_finance_search_notice 检索。公告窗口：2026-10-09 15:00至2026-10-12 09:00（北京时间），已去重。</div></div></section><section id="s6"><div class="section-header"><span class="num">06</span><h2>操作建议概览</h2></div><div class="body-panel"><h3>以结构验证为主，不把政策标题等同于行情结果</h3><p><span class="pill">分析</span> 上一交易日指数仅小幅上涨，但行业分化明显；政策与业绩预告提供了线索，仍需通过量能、板块广度和公告兑现情况确认。</p><div class="table-scroll"><table><thead><tr><th>情景</th><th>验证信号</th><th>观察思路</th></tr></thead><tbody><tr><td>政策主题扩散</td><td>算力、机器人、生物医药等方向出现成交与上涨家数同步改善</td><td>优先识别有订单、业绩或研发进展支撑的公司，避免按政策关键词泛化。</td></tr><tr><td>贵金属高波动延续</td><td>外盘金价与A股贵金属板块方向一致，资金流未快速反转</td><td>控制追高风险，不把单日涨幅和资金流视为持续信号。</td></tr><tr><td>指数强、个股弱</td><td>权重指数上涨但多数个股和成交未改善</td><td>保持谨慎，等待覆盖面确认。</td></tr><tr><td>公告催化分化</td><td>业绩预告、减持完成或重组进展被市场分别定价</td><td>区分预告与审计结果、进展与完成、历史减持与新计划。</td></tr></tbody></table></div><div class="notice">风险：海外利率与商品价格波动、政策预期落差、业绩预告修正、重组审批及高位题材回撤。报告不承诺收益；概念全榜及可靠亚太早盘数据未取得，未参与结论。</div></div></section><a class="history-link" href="../../history.html">盘前必读 · 历史归档 →</a></main><footer>来源：东方财富妙想、公司公告及公开原文。仅供参考，不构成投资建议。</footer><script src="../../_shared/js/echarts.min.js"></script><script src="./assets/charts.js"></script></body></html>
