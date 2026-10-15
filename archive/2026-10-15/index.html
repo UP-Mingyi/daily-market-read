@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>盘前必读 · 2026-10-15</title><style>
+@font-face { font-family: 'Tektur'; src: url('../../_shared/fonts/Tektur-Medium.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'Tektur'; src: url('../../_shared/fonts/Tektur-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'WorkSans'; src: url('../../_shared/fonts/WorkSans-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'WorkSans'; src: url('../../_shared/fonts/WorkSans-Bold.ttf') format('truetype'); font-weight: 700; }
+@font-face { font-family: 'IBMPlexMono'; src: url('../../_shared/fonts/IBMPlexMono-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'IBMPlexMono'; src: url('../../_shared/fonts/IBMPlexMono-Bold.ttf') format('truetype'); font-weight: 700; }
+
+:root {
+  --bg: #0d1b2a;
+  --bg2: #1b263b;
+  --bg3: #243447;
+  --ink: #e0e1dd;
+  --muted: #778da9;
+  --rule: #2a3a52;
+  --accent: #d4af37;
+  --up: #e63946;
+  --down: #2a9d8f;
+  --warn: #f4a261;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'WorkSans', -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+.top-bar {
+  background: linear-gradient(180deg, #1a2d42 0%, #0d1b2a 100%);
+  border-bottom: 3px solid var(--up);
+  padding: 36px 20px 28px;
+  text-align: center;
+}
+.top-bar h1 {
+  font-family: 'Tektur', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+.top-bar .sub { color: var(--muted); font-size: 0.9rem; margin-top: 6px; font-family: 'IBMPlexMono', monospace; }
+.top-bar .tag {
+  display: inline-block; margin-top: 10px; padding: 3px 14px;
+  border: 1px solid var(--accent); border-radius: 3px;
+  color: var(--accent); font-size: 0.78rem; letter-spacing: 0.1em;
+  font-family: 'Tektur', sans-serif;
+}
+.container { max-width: 980px; margin: 0 auto; padding: 36px 20px; }
+.section-header {
+  background: var(--bg3); padding: 14px 20px;
+  border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 14px; margin-top: 40px;
+}
+.section-header .num { font-family: 'Tektur', sans-serif; font-size: 1.6rem; font-weight: 500; color: var(--accent); min-width: 28px; }
+.section-header h2 { font-family: 'Tektur', sans-serif; font-size: 1.25rem; font-weight: 500; color: #fff; letter-spacing: 0.04em; }
+.section-body {
+  background: var(--bg2); border: 1px solid var(--rule); border-top: none;
+  border-radius: 0 0 4px 4px; padding: 24px 20px;
+}
+.summary { font-size: 15px; line-height: 1.8; color: var(--ink); margin-bottom: 20px; }
+.summary strong { color: var(--accent); font-weight: 700; }
+.metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 20px 0; }
+.metric-card { background: var(--bg); border: 1px solid var(--rule); border-radius: 6px; padding: 16px 14px; text-align: center; }
+.metric-card .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 8px; }
+.metric-card .value { font-family: 'IBMPlexMono', monospace; font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+.metric-card .change { font-family: 'IBMPlexMono', monospace; font-size: 0.85rem; font-weight: 700; margin-top: 4px; }
+.up { color: var(--up); }
+.down { color: var(--down); }
+.flat { color: var(--muted); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; border-radius: 4px; border: 1px solid var(--rule); margin: 16px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+thead { background: var(--bg3); position: sticky; top: 0; z-index: 1; }
+th { padding: 10px 12px; text-align: left; font-weight: 700; color: var(--ink); border-bottom: 1px solid var(--rule); white-space: nowrap; }
+td { padding: 9px 12px; border-bottom: 1px solid var(--rule); color: var(--ink); }
+tbody tr:hover { background: rgba(255,255,255,0.03); }
+td.num, th.num { font-family: 'IBMPlexMono', monospace; text-align: right; }
+td.center, th.center { text-align: center; }
+.news-item { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.news-item:last-child { border-bottom: none; }
+.news-item .news-title { font-size: 0.92rem; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.news-item .news-meta { font-size: 0.75rem; color: var(--muted); margin-bottom: 6px; }
+.news-item .news-meta .source { color: var(--accent); }
+.news-item .news-summary { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+.callout {
+  background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.35);
+  border-radius: 6px; padding: 14px 16px; margin: 16px 0; color: var(--ink);
+}
+.callout .callout-title { color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+.callout ul { margin-left: 1.1rem; }
+.callout li { margin-bottom: 5px; }
+.chart-box { height: 360px; margin: 20px 0; }
+.footer { text-align: center; padding: 24px 20px 40px; border-top: 1px solid var(--rule); margin-top: 40px; color: var(--muted); font-size: 0.8rem; }
+.footer a { color: var(--accent); text-decoration: none; }
+.footer .sources { text-align: left; max-width: 760px; margin: 0 auto 24px; }
+.footer .sources h3 { color: var(--accent); font-size: 0.9rem; margin-bottom: 10px; }
+.footer .sources ol { padding-left: 1.2rem; font-size: 0.78rem; line-height: 1.7; }
+.history-btn {
+  display: inline-block; margin: 18px 0 8px; padding: 10px 26px;
+  border: 1px solid var(--accent); border-radius: 4px; color: var(--accent);
+  text-decoration: none; font-size: 0.85rem; transition: all 0.3s;
+}
+.history-btn:hover { background: var(--accent); color: #0d1b2a; }
+
+
+a{color:#d4af37} .source{font-size:12px;color:#778da9;margin-top:10px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.quote{padding:22px;background:#1b263b;border:1px solid #2a3a52;border-radius:5px}.quote strong{font-size:29px;display:block;font-family:IBMPlexMono,monospace}.quote .label{color:#778da9;font-size:13px}.up{color:#e63946}.down{color:#2a9d8f}.body-panel{padding:24px;background:#1b263b;border:1px solid #2a3a52;line-height:1.85}.body-panel p{margin:0 0 12px}.body-panel h3{color:#d4af37;font-size:17px;margin:18px 0 8px}.body-panel h3:first-child{margin-top:0}.notice{border-left:3px solid #f4a261;padding:12px 16px;background:#243447;margin:18px 0;color:#e0e1dd}.chart{height:360px;margin:20px 0}.table-scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:12px;border-bottom:1px solid #2a3a52;text-align:left;vertical-align:top}th{background:#243447;color:#d4af37}tr:hover{background:#243447}.pill{display:inline-block;padding:2px 8px;background:#243447;color:#d4af37;font-size:12px}.history-link{display:block;text-align:center;margin:34px auto;padding:15px;border:1px solid #d4af37;max-width:330px;text-decoration:none}.history-link:hover{background:#d4af37;color:#fff}.nav{display:flex;flex-wrap:wrap;gap:14px;padding:18px 0;border-bottom:1px solid #2a3a52}.nav a{text-decoration:none;font-size:13px}footer{padding:24px;text-align:center;border-top:1px solid #2a3a52;color:#778da9;font-size:12px}.archive-list{list-style:none;padding:0}.archive-list li{display:flex;gap:16px;padding:16px;border-bottom:1px solid #2a3a52}.archive-list a{margin-left:auto}.archive-list .date{color:#d4af37}@media(max-width:640px){.grid{grid-template-columns:1fr 1fr}.quote{padding:15px}.quote strong{font-size:22px}.body-panel{padding:16px}.top-bar h1{font-size:1.8rem}.container{padding:20px 14px}.chart{height:400px}th,td{min-width:100px}.archive-list .label{display:none}}
+
+
+
+</style></head><body><header class="top-bar"><h1>盘前必读 · 2026年10月15日</h1><div class="sub">信息截止：北京时间09:00 · 生成：2026-10-15 09:05</div><span class="tag">交易日早报</span></header>
+<main class="container"><nav class="nav"><a href="#s1">01 市场温度计</a><a href="#s2">02 隔夜回顾与外盘速递</a><a href="#s3">03 宏观要闻</a><a href="#s4">04 板块前瞻</a><a href="#s5">05 个股公告速览</a><a href="#s6">06 操作建议概览</a></nav>
+<div class="notice">行情基准：A股、港股、美股及所列期货均为2026-10-14已完成交易日；海外日期为当地交易日。新闻主要窗口：10月14日15:00至10月15日09:00（北京时间）。</div>
+<section id="s1"><div class="section-header"><span class="num">01</span><h2>市场温度计</h2></div><div class="body-panel"><p>10月14日A股三大指数同步收跌，创业板指跌幅超过3%，风险偏好明显降温。沪深两市成交额合计约1.4144万亿元，较前一交易日缩量；创业板成交额已包含在深市口径内。定向观察的十个行业样本全部下跌并录得主力资金净流出，其中通信设备、半导体和电力设备承压较重。盘前应先观察高波动科技方向能否止跌，以及成交萎缩环境下资金是否转向低波动板块。</p>
+<div class="grid"><div class="quote"><div class="label">上证指数 · 10-14</div><strong>3,767.23</strong><span class="down">-0.89%</span><span class="label"> · 收盘 / 点</span></div><div class="quote"><div class="label">深证成指 · 10-14</div><strong>12,110.59</strong><span class="down">-1.97%</span><span class="label"> · 收盘 / 点</span></div><div class="quote"><div class="label">创业板指 · 10-14</div><strong>2,866.76</strong><span class="down">-3.10%</span><span class="label"> · 收盘 / 点</span></div></div>
+<div class="table-scroll"><table><thead><tr><th>指数</th><th>交易日</th><th>收盘</th><th>涨跌幅</th><th>成交额</th></tr></thead><tbody><tr><td>上证指数</td><td>2026-10-14</td><td>3,767.23点</td><td class="down">-0.89%</td><td>6,625亿元</td></tr><tr><td>深证成指</td><td>2026-10-14</td><td>12,110.59点</td><td class="down">-1.97%</td><td>7,519亿元</td></tr><tr><td>创业板指</td><td>2026-10-14</td><td>2,866.76点</td><td class="down">-3.10%</td><td>3,619亿元（计入深市）</td></tr></tbody></table></div>
+<h3>行业样本与资金关注</h3><div class="table-scroll"><table><thead><tr><th>行业</th><th>涨跌幅</th><th>主力净流入</th></tr></thead><tbody><tr><td>银行（板块口径）</td><td class="down">-0.36%</td><td class="down">-6.752亿元</td></tr><tr><td>半导体（申万）</td><td class="down">-3.20%</td><td class="down">-73.700亿元</td></tr><tr><td>消费电子（申万）</td><td class="down">-3.21%</td><td class="down">-19.100亿元</td></tr><tr><td>通信设备（申万）</td><td class="down">-4.50%</td><td class="down">-62.160亿元</td></tr><tr><td>计算机设备（申万）</td><td class="down">-1.63%</td><td class="down">-4.581亿元</td></tr><tr><td>电力设备（申万）</td><td class="down">-2.86%</td><td class="down">-62.140亿元</td></tr><tr><td>汽车（申万）</td><td class="down">-2.20%</td><td class="down">-16.810亿元</td></tr><tr><td>国防军工（申万）</td><td class="down">-1.16%</td><td class="down">-3.491亿元</td></tr><tr><td>贵金属（申万）</td><td class="down">-2.60%</td><td class="down">-3.644亿元</td></tr><tr><td>工业金属（申万）</td><td class="down">-1.58%</td><td class="down">-7.649亿元</td></tr></tbody></table></div><p class="source">来源：东方财富妙想指数/板块数据。行业为定向样本而非完整排名；“主力净流入”为妙想对应统计口径。</p></div></section>
+
+<section id="s2"><div class="section-header"><span class="num">02</span><h2>隔夜回顾与外盘速递</h2></div><div class="body-panel"><p>10月14日美股主要指数普遍走弱，其中纳斯达克综合指数下跌1.88%，标普500指数跌1.11%；恒生指数小幅收跌。商品方面，NYMEX原油结算上涨1.01%，COMEX黄金结算下跌1.66%。海外科技风险偏好回落叠加A股前一交易日成长板块下行，今日需重点观察科技方向的承接与波动放大风险。</p>
+<div class="table-scroll"><table><thead><tr><th>市场</th><th>交易日</th><th>收盘/结算</th><th>涨跌幅</th></tr></thead><tbody><tr><td>道琼斯工业平均</td><td>2026-10-14</td><td>51,621.48点</td><td class="down">-0.09%</td></tr><tr><td>纳斯达克综合</td><td>2026-10-14</td><td>26,692.87点</td><td class="down">-1.88%</td></tr><tr><td>标普500</td><td>2026-10-14</td><td>7,718.94点</td><td class="down">-1.11%</td></tr><tr><td>恒生指数</td><td>2026-10-14</td><td>24,314.17点</td><td class="down">-0.13%</td></tr><tr><td>NYMEX原油结算</td><td>2026-10-14</td><td>—（仅采用涨跌幅）</td><td class="up">+1.01%</td></tr><tr><td>COMEX黄金结算</td><td>2026-10-14</td><td>—（仅采用涨跌幅）</td><td class="down">-1.66%</td></tr></tbody></table></div><div id="global-chart" class="chart"></div><p class="source">来源：东方财富妙想指数及综合金融数据。商品绝对价格单位返回存在歧义，故仅采用结算涨跌幅；图表只比较涨跌幅，不比较不同指数点位。</p></div></section>
+
+<section id="s3"><div class="section-header"><span class="num">03</span><h2>宏观要闻</h2></div><div class="body-panel">
+<div class="news-item"><div class="news-title">央行发布2026年前三季度金融统计数据</div><div class="news-meta"><span class="source">中国人民银行数据，经财联社整理；妙想检索</span> · 2026-10-14</div><div class="news-summary">9月末广义货币M2余额359.63万亿元，同比增长7.2%；社会融资规模存量468.17万亿元，同比增长7.1%。前三季度人民币贷款增加11.52万亿元，人民币存款增加20.76万亿元；前三季度社会融资规模增量累计27.46万亿元，同比少2.63万亿元。<a href="https://www.cls.cn/detail/2505128">来源摘要</a></div></div>
+<div class="news-item"><div class="news-title">央行将开展7000亿元买断式逆回购操作</div><div class="news-meta"><span class="source">中国人民银行公告，经财联社转载；妙想检索</span> · 2026-10-14 17:02</div><div class="news-summary">为保持银行体系流动性充裕，央行公告将于10月15日开展7000亿元、6个月（182天）买断式逆回购操作；这是当日计划事项，操作结果仍以央行公布为准。<a href="https://www.cls.cn/detail/2504587">来源摘要</a></div></div>
+<div class="news-item"><div class="news-title">前三季度我国货物贸易进出口39.94万亿元</div><div class="news-meta"><span class="source">海关总署</span> · 2026-10-14</div><div class="news-summary">海关总署披露，前三季度货物贸易进出口总值39.94万亿元，同比增长18.8%；其中出口23.20万亿元、增长16.4%，进口16.74万亿元、增长22.3%。<a href="https://www.customs.gov.cn/customs/xwfb34/302330/hgzs2026nqsjdjckqkxwfbh75/index.html">海关总署原文</a></div></div>
+<p class="source">新闻结果按发布时间和主题去重。妙想检索摘要不等同于独立核验；关键数据优先列示主管部门口径，正式信息以原始发布为准。</p></div></section>
+
+<section id="s4"><div class="section-header"><span class="num">04</span><h2>板块前瞻</h2></div><div class="body-panel"><div class="table-scroll"><table><thead><tr><th>方向</th><th>当日证据</th><th>观察重点</th><th>相关个股（仅跟踪）</th></tr></thead><tbody>
+<tr><td>AI基础设施 / PCB</td><td>沪电股份、紫光股份等三季报预告显示AI服务器、高速交换机及AI基础设施需求贡献增长；但纳指前夜跌1.88%，A股半导体与通信设备前日均显著回落。</td><td>业绩兑现能否抵消估值与海外科技波动，避免只凭预告增速追高</td><td>沪电股份、紫光股份、中际旭创</td></tr>
+<tr><td>通信与算力网络</td><td>江苏通信行业“十五五”规划信息强调新一代通信与算力网络；通信设备样本前日跌4.50%，主力净流出62.16亿元。</td><td>政策落地、资本开支与资金承接的同步性</td><td>中兴通讯、光迅科技、浪潮信息</td></tr>
+<tr><td>石化 / 能源</td><td>荣盛石化、卫星化学披露高增业绩预告，NYMEX原油结算涨1.01%。</td><td>产品价差、油价波动及高增基数是否可持续</td><td>荣盛石化、卫星化学、恒力石化</td></tr>
+<tr><td>卫星与太空计算</td><td>“星算”02组多星入轨为产业事件线索；国防军工样本前日跌1.16%且资金净流出。</td><td>产业进展需转化为订单和业绩，关注主题交易波动</td><td>中国卫星、航天电子、国博电子</td></tr>
+</tbody></table></div><p class="source">来源：东方财富妙想行情、新闻与公告检索。个股仅为产业链观察样本，不构成推荐；政策与事件线索需继续核对主管部门或公司原文。</p></div></section>
+
+<section id="s5"><div class="section-header"><span class="num">05</span><h2>个股公告速览</h2></div><div class="body-panel"><div class="table-scroll"><table><thead><tr><th>公司</th><th>类型 / 发布时间</th><th>核心内容与风险</th><th>原文</th></tr></thead><tbody>
+<tr><td>嘉元科技（688388）</td><td>前三季度业绩预告<br>2026-10-15 00:15</td><td>预计归母净利润5.30亿至5.80亿元，同比增长1196.60%至1318.92%，主要受铜箔需求、产能利用率和成本改善等因素影响；数据未经审计。</td><td><a href="https://pdf.dfcfw.com/pdf/H2_AN202610141830453220_1.pdf">公告PDF</a></td></tr>
+<tr><td>沪电股份（002463）</td><td>前三季度业绩预告<br>2026-10-15 00:16</td><td>预计归母净利润54.50亿至57.00亿元，同比增长100.54%至109.74%，AI服务器、高速交换机和汽车电子需求贡献增长；数据未经审计。</td><td><a href="https://pdf.dfcfw.com/pdf/H2_AN202610141830459992_1.PDF">公告PDF</a></td></tr>
+<tr><td>紫光股份（000938）</td><td>前三季度业绩预告<br>2026-10-15 00:16</td><td>预计归母净利润24.20亿至30.60亿元，同比增长72.38%至117.97%；AI基础设施需求、新华三股权变化及非经常性因素共同影响，数据未经审计。</td><td><a href="https://pdf.dfcfw.com/pdf/H2_AN202610141830460325_1.PDF">公告PDF</a></td></tr>
+<tr><td>德业股份（605117）</td><td>前三季度业绩预告<br>2026-10-15 00:17</td><td>预计归母净利润42.20亿至43.20亿元，同比增长79.81%至84.07%；业绩预告未经审计，后续以定期报告为准。</td><td><a href="https://pdf.dfcfw.com/pdf/H2_AN202610141830464162_1.pdf">公告PDF</a></td></tr>
+<tr><td>荣盛石化（002493）</td><td>前三季度业绩预告<br>2026-10-15 00:20</td><td>预计归母净利润78.00亿至82.00亿元，同比增长777.93%至822.95%，公司称石化产品价差改善；数据未经审计，仍受原料和产品价格波动影响。</td><td><a href="https://pdf.dfcfw.com/pdf/H2_AN202610141830469394_1.PDF">公告PDF</a></td></tr>
+</tbody></table></div><p class="source">来源：东方财富妙想公告检索及上市公司公告PDF。摘要不替代完整公告；业绩预告均未经审计，最终数据以正式定期报告为准。</p></div></section>
+
+<section id="s6"><div class="section-header"><span class="num">06</span><h2>操作建议概览</h2></div><div class="body-panel"><div class="callout"><div class="callout-title">事实基础</div><ul><li>A股10月14日三大指数均下跌，创业板指跌3.10%，两市成交约1.41万亿元。</li><li>十个定向行业样本全部收跌且主力资金均净流出，成长方向压力更集中。</li><li>纳指和标普500分别下跌1.88%和1.11%，海外科技风险偏好同步转弱。</li></ul></div>
+<div class="callout"><div class="callout-title">情景判断（分析）</div><ul><li><strong>弱势修复：</strong>若早盘跌幅收窄且行业上涨家数扩大，可跟踪业绩有支撑方向的量价修复，但不以单一高增预告替代估值判断。</li><li><strong>延续承压：</strong>若科技板块继续放量下行、资金净流出扩大，应降低高弹性主题暴露并重视仓位纪律。</li><li><strong>防御切换：</strong>若指数震荡而低波动板块相对走强，关注资金风格变化是否获得连续成交确认。</li></ul></div>
+<p>主要风险包括业绩预告与正式报告存在差异、海外科技股继续调整、油价与地缘事件波动、政策与产业事件兑现不及预期。以上不构成收益承诺或投资建议。</p></div></section>
+<a class="history-link" href="../../history.html">查看历史归档</a></main><footer>数据来源：东方财富妙想、上市公司公告及公开来源。信息截止北京时间2026-10-15 09:00，仅供参考，不构成投资建议。</footer><script src="../../_shared/js/echarts.min.js"></script><script src="./assets/charts.js"></script></body></html>
